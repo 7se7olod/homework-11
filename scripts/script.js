@@ -26,18 +26,21 @@ $(document).ready(function () {
                 breakpoint: 436,
                 settings: {
                     slidesToShow: 1.3,
+                    swipe: true,
                 }
             },
             {
                 breakpoint: 377,
                 settings: {
                     slidesToShow: 1.2,
+                    swipe: true,
                 }
             },
             {
                 breakpoint: 326,
                 settings: {
                     slidesToShow: 1.12,
+                    swipe: true,
                 }
             }
         ]
@@ -49,6 +52,14 @@ $(document).ready(function () {
         speed: 300,
         fade: true,
         swipe: false,
+        responsive: [
+            {
+                breakpoint: 780,
+                settings: {
+                    swipe: true,
+                }
+            },
+            ]
     });
 
     $(".reviews__items-slider").slick({
@@ -62,12 +73,14 @@ $(document).ready(function () {
                 breakpoint: 1169,
                 settings: {
                     slidesToShow: 1,
+                    swipe: true,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
+                    swipe: true,
                 }
             }
         ]
