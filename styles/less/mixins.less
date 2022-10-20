@@ -1,0 +1,62 @@
+@import "fonts";
+@import "variables";
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0 15px 0 15px;
+  box-sizing: border-box;
+}
+
+.title-philosopher-bold {
+  font-size: 35px;
+  font-family: Philosopher-Bold, sans-serif;
+  color: @black-color;
+}
+
+.btn {
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: Montserrat-SemiBold, sans-serif;
+  color: @black-color;
+  background: @linear-gradient-175deg;
+}
+
+.display-flex-position-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-flex-position-center-row {
+  .display-flex-position-center();
+  flex-direction: row;
+}
+
+.display-flex-position-center-column {
+  .display-flex-position-center();
+  flex-direction: column;
+}
+
+.display-flex-position-start-column {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+}
+
+.border-radius-box-sizing {
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.border-orange-3px {
+  border: 3px solid @orange-color;
+  .border-radius-box-sizing();
+}
+
+.border-orange-2px {
+  border: 2px solid @orange-color;
+  .border-radius-box-sizing();
+}
