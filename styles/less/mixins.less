@@ -8,36 +8,33 @@
   box-sizing: border-box;
 }
 
-.title-philosopher-bold {
+.title-philosopher {
   font-size: 35px;
-  font-family: 'Philosopher', sans-serif;
+  font-family: 'Philosopher-Bold', sans-serif;
   color: @black-color;
 }
 
 .montserrat-normal {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat-Regular', sans-serif;
   font-weight: normal;
 }
 
 .montserrat-semiBold {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-family: 'Montserrat-SemiBold', sans-serif;
 }
 
 .montserrat-italic {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+  font-family: 'Montserrat-Italic', sans-serif;
 }
 
 .montserrat-bold {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
+  font-family: 'Montserrat-Bold', sans-serif;
 }
 
 .btn {
+  .display-flex-position-center-column();
   border: none;
   box-sizing: border-box;
-  cursor: pointer;
   font-family: Montserrat-SemiBold, sans-serif;
   color: @black-color;
   background: @linear-gradient-175deg;
@@ -79,4 +76,24 @@
 .border-orange-2px {
   border: 2px solid @orange-color;
   .border-radius-box-sizing();
+}
+
+.navigation-buttons {
+  background-size: contain;
+  background-position: center;
+  height: 15px;
+  width: 15px;
+  border: none;
+  color: transparent;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  z-index: 3;
+}
+
+.navigation-button-prev {
+  background-image: url("../../images/down-arrow.png");
+}
+
+.navigation-button-next {
+  background-image: url("../../images/next-arrow.png");
 }
