@@ -129,11 +129,6 @@ $(document).ready(function () {
                 if (!message.success) {
                     alert('Возникла ошибка при оформлении заказа, позвоните нам и сделайте заказ!');
                 } else {
-                    // $('.form__block').css('visibility', 'hidden');
-                    // $('.form-success-message').css('display', 'flex');
-                    // formBlockHidden.css('visibility', 'hidden');
-                    // formSuccessShow.css('display', 'flex');
-                    // popupPhoneCall.hide();
                     hideAndShowBlock();
                 }
             })
@@ -194,18 +189,14 @@ $(document).ready(function () {
     });
 
 
-    let heightItem;
     $('.program-tour__read-more-button').click(function () {
         let buttonTextShow = $(this).children()[0].textContent;
         if (buttonTextShow === 'Читать далее') {
-            heightItem = $(this).parent().height;
             $(this).children()[0].textContent = 'Скрыть текст';
-            $(this).parent().css('height', 'auto').css('max-height', 'fit-content').css('background-size', 'cover');
-            $(this).prev().css('display', 'block').css('max-height', 'none').css('font-size', '11px');
+            $(this).prev().css('display', 'block');
         } else if (buttonTextShow === 'Скрыть текст') {
             $(this).children()[0].textContent = 'Читать далее';
-            $(this).parent().css('height', '271px').css('max-height', '157px').css('background-size', 'contain');
-            $(this).prev().css('display', '-webkit-box').css('max-height', '69px').css('font-size', '12px');
+            $(this).prev().css('display', '-webkit-box');
         }
     });
 
@@ -213,12 +204,11 @@ $(document).ready(function () {
         let buttonTextShow = $(this).children()[0].textContent;
         if (buttonTextShow === 'Читать далее') {
             $(this).children()[0].textContent = 'Скрыть текст';
-            $(this).parent().css('height', 'auto').css('background-size', 'cover');
-            $(this).prev().css('display', 'block').css('max-height', 'none');
+            $(this).prev().css('display', 'inherit');
+
         } else if (buttonTextShow === 'Скрыть текст') {
             $(this).children()[0].textContent = 'Читать далее';
-            $(this).parent().css('height', '270px').css('background-size', 'contain');
-            $(this).prev().css('display', '-webkit-box').css('max-height', '230px');
+            $(this).prev().css('display', '-webkit-box');
         }
     });
 });
