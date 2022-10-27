@@ -315,19 +315,17 @@ body {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      align-items: center;
+      align-items: stretch;
       flex-wrap: wrap;
       gap: 31px;
 
       .program-tour__item {
         width: 540px;
-        height: 300px;
         border: 2px solid @orange-color;
         border-radius: 10px;
-        padding: 33px 0 0 37px;
+        padding: 33px 0 20px 37px;
         box-sizing: border-box;
         background-size: contain;
-        transition: all;
 
         .program-tour__item-title {
           font-size: 18px;
@@ -342,7 +340,6 @@ body {
           color: @black-color;
           line-height: 1.533;
           text-align: left;
-          width: 267px;
           max-width: 247px;
         }
 
@@ -354,12 +351,11 @@ body {
       .bg-program-tour-1 {
         background: linear-gradient(90deg, #fff3e1 22%, transparent 36%), url("../../images/program-tour-1.png") no-repeat;
         background-position-x: 183px;
-        background-position-y: -26px;
       }
 
       .bg-program-tour-2 {
-        background: linear-gradient(90deg, #fff3e1 4%, transparent 15%), url("../../images/program-tour-2.png") no-repeat;
-        background-position-x: 302px;
+        background: linear-gradient(90deg, #fff3e1 0%, transparent 15%),url(../../images/program-tour-2.png) no-repeat;
+        background-position-x: 333px;
       }
 
       .bg-program-tour-3 {
@@ -368,9 +364,8 @@ body {
       }
 
       .bg-program-tour-4 {
-        background: linear-gradient(90deg, #fff3e1 7%, transparent 16%), url("../../images/program-tour-4.png") no-repeat;
-        background-position-x: 284px;
-        background-position-y: -24px;
+        background: linear-gradient(90deg, #fff3e1 4%, transparent 16%), url("../../images/program-tour-4.png") no-repeat;
+        background-position-x: 310px;
       }
 
       .bg-program-tour-5 {
@@ -379,19 +374,18 @@ body {
       }
 
       .bg-program-tour-6 {
-        background: linear-gradient(90deg, #fff3e1 32%, transparent 40%), url("../../images/program-tour-6.png") no-repeat;
+        background: linear-gradient(90deg, #fff3e1 34%, transparent 40%), url("../../images/program-tour-6.png") no-repeat;
         background-position-x: 144px;
       }
-    }
 
-    .transformed-state {
-      transform: rotate(270deg);
-      background-color: blue;
-      color: yellow;
-      font-size: 12px;
-      transition-property: background-color, font-size, transform, color;
-      transition-timing-function: ease-in-out;
-      transition-duration: 3s;
+      .bg-program-tour-1,
+      .bg-program-tour-2,
+      .bg-program-tour-3,
+      .bg-program-tour-4,
+      .bg-program-tour-5,
+      .bg-program-tour-6 {
+        background-size: contain;
+      }
     }
   }
 }
@@ -867,63 +861,72 @@ body {
       width: 85.5%;
       margin-bottom: 10px;
 
-      .reviews__item-slide {
+      .slick-list {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        align-items: stretch;
 
-        .reviews__item {
-          .border-orange-2px();
-          .display-flex-position-start-column();
-          margin: 0 15px 0 15px;
-          width: 445px;
-          height: 365px;
-          padding: 35px;
-          gap: 30px;
-          box-sizing: border-box;
+        .slick-track {
+          display: flex;
+          align-items: stretch;
 
-          .reviews__item-user {
+          .reviews__item-slide {
             display: flex;
-            align-items: center;
-            gap: 24px;
+            justify-content: center;
+            align-items: stretch;
 
-            .reviews__item-user-avatar {
-              img {
-                height: 60px;
-                width: 60px;
-                border-radius: 50%;
+            .reviews__item {
+              .border-orange-2px();
+              margin: 0 15px 0 15px;
+              width: 445px;
+              max-height: 365px;
+              padding: 35px;
+              box-sizing: border-box;
+
+              .reviews__item-user {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                margin-bottom: 30px;
+
+                .reviews__item-user-avatar {
+                  img {
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50%;
+                  }
+                }
+
+                .reviews__item-user-block {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+
+                  .reviews__item-user-name {
+                    font-size: 14px;
+                    .montserrat-bold();
+                    color: @black-color;
+                    line-height: 1;
+                  }
+
+                  .reviews__item-user-location {
+                    font-size: 14px;
+                    color: rgb(124, 124, 124);
+                    line-height: 1;
+                  }
+                }
               }
-            }
 
-            .reviews__item-user-block {
-              display: flex;
-              flex-direction: column;
-              gap: 10px;
-
-              .reviews__item-user-name {
+              .reviews__item-text {
                 font-size: 14px;
-                .montserrat-bold();
                 color: @black-color;
-                line-height: 1;
+                line-height: 1.643;
+                text-align: left;
               }
 
-              .reviews__item-user-location {
-                font-size: 14px;
-                color: rgb(124, 124, 124);
-                line-height: 1;
+              .reviews__read-more-button {
+                display: none;
               }
             }
-          }
-
-          .reviews__item-text {
-            font-size: 14px;
-            color: @black-color;
-            line-height: 1.643;
-            text-align: left;
-          }
-
-          .reviews__read-more-button {
-            display: none;
           }
         }
       }
